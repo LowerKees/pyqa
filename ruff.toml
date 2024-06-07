@@ -1,0 +1,29 @@
+line-length = 88
+indent-width = 4
+
+[lint]
+select = [
+    # flake8 builtins
+    "A",
+    # pycodestyle
+    "E",
+    # bug bear
+    "B",
+    # pydocstyle
+    "D",
+    # isort
+    "I",
+    # flake8 simplify
+    "SIM",
+    # pyflakes
+    "F",
+    # pep8 naming
+    "N",
+    # mccabe complexity
+    "C901"]
+
+[lint.pydocstyle]
+convention = "google"
+
+[lint.mccabe]
+max-complexity = 5

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "product1"
+version = "0.0.1a"
+dependencies = ["pyspark == 3.5.1", "delta-spark ~= 3.2.0"]
+optional-dependencies = { build = ["build", "wheel"], test = ["pytest", "pytest-mock", "pytest-sugar", "pandas", "pyarrow"] }
+requires-python = ">=3.11"
+authors = [
+    { name = "All of us at Data Rocks 6", email = "datarocks@teamrockstars.com" },
+]
+
+readme = "README.MD"
+license = { file = "LICENSE.txt" }
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
